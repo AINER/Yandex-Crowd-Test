@@ -1,0 +1,94 @@
+@import url(https://db.onlinewebfonts.com/c/55b3b22e91fcf995e6a087241e519670?family=YS+Text+Medium+Regular);
+
+.stall-background {
+  position: fixed;
+  bottom: 140px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.shelf-1 {
+  position: fixed;
+  bottom: 448px;
+  left: 50%;
+  transform: translate(-50%);
+  white-space:nowrap
+}
+
+.shelf-2 {
+  position: fixed;
+  bottom: 340px;
+  left: 50%;
+  transform: translate(-50%);
+  white-space:nowrap
+}
+
+.shelf-3 {
+  position: fixed;
+  bottom: 254px;
+  left: 50%;
+  transform: translate(-50%);
+  white-space:nowrap
+}
+
+.cart {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.pay-button {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+
+  width: 174px;
+  height: 56px;
+  border: none;
+  border-radius: 16px;;
+  appearance: none;
+
+  color: #21201F;
+  font-size: 16px;
+  font-family: "YS Text Medium Regular";
+
+  background: #FCE000;
+  transition: 0.2s;
+
+  &:hover {
+    background: #fcd604;
+    transition: 0.2s;
+  }
+}
+
+.pay-button::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+
+  border-radius: inherit;
+  background: #FCE000;
+
+  animation: 3s pulseButton ease-in-out infinite;
+}
+
+@keyframes pulseButton {
+    0% {
+        opacity: 1;
+        transform: scaleX(0) scaleY(0);
+    }
+
+    100% {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+}
